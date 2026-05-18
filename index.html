@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Department</title>
+
+    <style>
+
+        body{
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #e6e6e6;
+        }
+
+        /* HEADER */
+
+        header{
+            background-color: #c28707;
+            color: white;
+            padding: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1{
+            margin: 0;
+            font-size: 40px;
+        }
+
+        /* LOGO */
+
+.logo{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+        /* PAGE LAYOUT */
+
+        .container{
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* LEFT NAVIGATION */
+
+        .sidebar{
+            width: 160px;
+            background-color: white;
+            padding: 10px 0;
+            border: 2px solid #ccc;
+        }
+
+        .sidebar a{
+            display: block;
+            color: black;
+            text-decoration: none;
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .sidebar a:hover{
+            background-color: #d9d9d9;
+        }
+
+        /* MAIN CONTENT */
+
+        .main{
+            flex: 1;
+        }
+
+        /* CAROUSEL */
+
+        .carousel{
+            width: 100%;
+            max-width: 950px;
+            height: 450px;
+            overflow: hidden;
+            border: 3px solid black;
+            background-color: white;
+            margin-bottom: 15px;
+        }
+
+        .carousel img{
+            width: 100%;
+            height: 450px;
+            display: none;
+            object-fit: cover;
+        }
+
+        /* BUTTON */
+
+        .button-area{
+            margin-bottom: 20px;
+        }
+
+        button{
+            background-color: #c28707;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: #9c6c05;
+        }
+
+        /* INFORMATION SECTION */
+
+        .info{
+            background-color: white;
+            padding: 30px;
+            line-height: 1.8;
+            border: 2px solid #ccc;
+            max-width: 950px;
+        }
+
+        .info h2{
+            margin-top: 0;
+            font-size: 32px;
+        }
+
+        .info p{
+            font-size: 18px;
+        }
+
+        /* FOOTER */
+
+        footer{
+            background-color: #c28707;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 20px;
+        }
+
+        footer p{
+            margin: 8px;
+            font-size: 17px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>Coleg Ceredigion Construction Department</h1>
+
+        <!-- LOGO -->
+
+<a href="1.Index.html">
+    <img class="logo" src="Assets/Logo-removebg-preview.png" alt="Logo">
+</a>
+
+    </header>
+
+    <!-- PAGE CONTENT -->
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+
+        <div class="sidebar">
+
+            <a href="1.Index.html">Home</a>
+            <a href="2.Information.html">Information</a>
+            <a href="3.ContactApply.html">Apply</a>
+            <a href="4.Testimonials.html">Testimonials</a>
+            <a href="5.AppHub.html">App Hub</a>
+
+        </div>
+
+        <!-- MAIN CONTENT -->
+
+        <div class="main">
+
+            <!-- IMAGE CAROUSEL -->
+
+            <div class="carousel">
+
+                <img class="slide" src="https://d17nf5wnukpf8f.cloudfront.net/banners/Find-a-Course/Department/View-all-course-areas/Construction/_card/152532/Construction-Header-Image.webp">
+
+                <img class="slide" src="https://macclesfield.ac.uk/wp-content/uploads/2023/02/our-campus-22-gallery-min.webp">
+
+                <img class="slide" src="https://www.kidderminster.ac.uk/media/elljmv3o/4g1a0973.jpg?width=508&height=290&v=1dba2f78eb8f730">
+                
+                <img class="slide" src="https://www.citb.co.uk/media/fx1kmvwq/build-academy-3.jpeg?width=536&height=302&format=WebP&quality=75&v=1dca247fb2d4ce0">
+
+            </div>
+
+            <!-- BUTTON -->
+
+            <div class="button-area">
+
+                <button onclick="nextSlide()">Next Image</button>
+
+            </div>
+
+            <!-- INFORMATION -->
+
+            <div class="info">
+
+                <h2>Build Your Future With Us Today</h2>
+
+                <p>
+                    Welcome to the Construction Department website.
+                    Here you can find information about construction
+                    courses, student projects and practical work.
+                </p>
+
+                <p>
+                    Students learn important building skills and gain
+                    experience using industry-standard equipment and
+                    tools in practical workshop environments.
+                </p>
+
+                <p>
+                    Our department helps students prepare for careers
+                    in bricklaying, carpentry, site management and
+                    other areas within the construction industry.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>Phone Number: 07 123 456 789</p>
+
+        <p>Email: construction@college.com</p>
+
+        <p>Postcode: SA31 1AB</p>
+
+    </footer>
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        let slideIndex = 0;
+
+        let slides = document.getElementsByClassName("slide");
+
+        function showSlide(){
+
+            for(let i = 0; i < slides.length; i++){
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndex].style.display = "block";
+        }
+
+        function nextSlide(){
+
+            slideIndex++;
+
+            if(slideIndex >= slides.length){
+                slideIndex = 0;
+            }
+
+            showSlide();
+        }
+
+        showSlide();
+
+    </script>
+
+</body>
+</html>
